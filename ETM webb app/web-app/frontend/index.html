@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<!-- <link rel="stylesheet" href="currency.css"> -->
+		<script src="script.js" defer></script>
+		<!-- <script src="currency.js" defer></script> -->
+
+		<title>EconMe</title>
+	</head>
+	<body>
+		<!-- Side Navigation Bar -->
+		<aside class="side-bar">
+			<span class="menu-label">MENU</span>
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">
+						<span class="nav-icon">
+							<i class="fa-solid fa-house"></i>
+						</span>
+						<span class="nav-text">Dashboard</span>
+					</a>
+				</li>
+				<li>
+					<a href="currency.html">
+						<span class="nav-icon">
+							<i class="fa-solid fa-house"></i>
+						</span>
+						<span class="nav-text">Currency</span>
+					</a>
+				</li>
+				<li>
+					<a href="contact.html">
+						<span class="nav-icon">
+							<i class="fa-solid fa-info-circle"></i>
+						</span>
+						<span class="nav-text">Contact</span>
+					</a>
+				</li>
+		</aside>
+	
+		<!-- Main Content -->
+		<div class="container">
+			<h2>EconMe</h2>
+			<div class="error_message">
+				<p>Please Enter a Valid Amount | More Than 0</p>
+			</div>		
+			<div class="budget_content">
+				<div class="ur_budget">
+					<form>
+						<label for="budget">Budget</label>
+						<input 
+							type="number" 
+							placeholder="Enter Your Budget" 
+							class="budget_input"
+							/>
+						<button class="btn" id="btn_budget">Add Income</button>
+					</form>
+				</div>
+				<div class="ur_expenses">
+					<form>
+						<label for="expense">Expense Details</label>
+						<input 
+							type="text" 
+							placeholder="Enter Expense Description" 
+							class="expense_input"
+							/>
+						<input 
+							type="number" 
+							placeholder="Enter Expense Amount" 
+							class="expense_amount"
+							/>
+						<button class="btn" id="btn_expense">Add Expense</button>
+					</form>
+				</div>
+			</div>
+			<!---------------Card Start-------------->
+			<ul class="cards">
+				<li>
+					<i class="bx bx-money"></i>
+					<span class="info">
+						<h3><span>$</span><span class="bugdet_card">0</span></h3>
+						<p>Budget</p>
+					</span>
+				</li>
+				<li>
+					<i class="bx bx-credit-card"></i>
+					<span class="info">
+						<h3><span>$</span><span class="expenses_card">0</span></h3>
+						<p>Expenses</p>
+					</span>
+				</li>
+				<li>
+					<i class="bx bx-dollar"></i>
+					<span class="info">
+						<h3><span>$</span><span class="balance_card">0</span></h3>
+						<p>Balance</p>
+					</span>
+				</li>
+			</ul>
+			<!---------------Card Close-------------->
+			
+			<!---------------Table Start-------------->
+			<div class="tbl_content">
+				<h3>Budget Details</h3>
+				<div class="tbl_data">
+					<!-- <ul class="tbl_tr_content">
+						<li>1</li>
+						<li>Gaming Mouse</li>
+						<li><span>$</span>150</li>
+						<li>
+							<button type="button" class="btn_edit">Edit</button>
+							<button type="button" class="btn_delete">Delete</button>
+						</li>
+					</ul> -->
+				</div>
+			</div>
+		</div>
+    <!-- Notepad Content -->
+    <div class="f-container">
+        <h1>Notepad</h1>
+        <p>Add, edit, and save your notes below:</p>
+        <div class="notepad">
+            <textarea id="note-input" class="input-field" rows="5" placeholder="Write your note here..."></textarea>
+            <button id="save-note" class="btn btn-primary">Save Note</button>
+        </div>
+        <div class="notes-list">
+            <h2>Your Notes</h2>
+            <ul id="notes-container"></ul>
+        </div>
+    </div>		
+	<script src="notepad.js"></script>
+
+	    <!-- Summary Content -->
+		<div class="f-container">
+			<h1>Spending Summary</h1>
+			<div class="summary-content">
+				<div class="summary-card">
+					<h2>Total Budget</h2>
+					<p id="total-budget">$0</p>
+				</div>
+				<div class="summary-card">
+					<h2>Total Expenses</h2>
+					<p id="total-expenses">$0</p>
+				</div>
+				<div class="summary-card">
+					<h2>Remaining Balance</h2>
+					<p id="remaining-balance">$0</p>
+				</div>
+			</div>
+			<div class="spending-details">
+				<h2>Spending Details</h2>
+				<ul id="spending-list">
+					<!-- Spending details will be dynamically added here -->
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
+
