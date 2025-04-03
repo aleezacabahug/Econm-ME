@@ -4,41 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="script.js" defer></script>
-    
-    <title>Contact Us - Expense Tracker Mate</title>
+    <title>Register - Expense Tracker Mate</title>
 </head>
 <body>
-
-
-    <!-- Contact Content -->
+    <!-- Register Content -->
     <div class="f-container">
-        <h1>Create an account</h1>
+        <h1>Create an Account</h1>
         <p>If you already have an account, <a href="login.html" class="link">login here</a>.</p>
 
-        <!-- Login Form -->
-        <form id="contact-form" class="form" method="post" action="/submit-contact">
+        <!-- Registration Form -->
+        <form id="register-form" class="form">
             <div class="form-group">
-                <label for="full-name">Username:</label>
-                <input type="text" id="full-name" name="fullName" class="input-field" placeholder="Enter your full name" required>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" class="input-field" placeholder="Enter your username" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" class="input-field" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
-                <label for="phone">Password:</label>
-                <input type="tel" id="phone" name="phone" class="input-field" placeholder="Enter your phone number">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="input-field" placeholder="Enter your password" required>
             </div>
-            <div class="form-group">
-                <label for="phone">Retype Password:</label>
-                <input type="tel" id="phone" name="phone" class="input-field" placeholder="Enter your phone number">
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn">Create Account</button>
-            </div>
+            <button type="submit" class="btn">Create Account</button>
         </form>
     </div>
+
+    <script>
+        const registerForm = document.getElementById('register-form');
+
+        registerForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, email, password }),
+                });
+
+                const data = await response.json();
+                if (response.ok) {
+                    alert(data.message);
+                    window.location.href = 'login.html';
+                } else {
+                    alert(data.message);
+                }
+            } catch (err) {
+                console.error('Error:', err);
+                alert('An error occurred. Please try again.');
+            }
+        });
+    </script>
 </body>
 </html>
