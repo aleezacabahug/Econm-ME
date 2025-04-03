@@ -631,12 +631,12 @@ Button
 }
 
 .note-actions .edit-note {
-    background-color: #ffc107;
+    background-color: #76a8db;
     color: #fff;
 }
 
 .note-actions .delete-note {
-    background-color: #dc3545;
+    background-color: #6fd59d;
     color: #fff;
 }
 
