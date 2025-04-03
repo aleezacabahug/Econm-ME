@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="script.js" defer></script>
-    
-    <title>Contact Us - Expense Tracker Mate</title>
+    <script src="summary.js" defer></script>
+    <title>Summary - Expense Tracker Mate</title>
 </head>
 <body>
     <!-- Side Navigation Bar -->
@@ -47,43 +46,39 @@
                 </a>
             </li>
             <li>
-                <a href="summary.html">
+                <a href="summary.html" class="active">
                     <span class="nav-icon">
                         <i class="fa-solid fa-envelope"></i>
                     </span>
                     <span class="nav-text">Summary</span>
                 </a>
             </li>
+        </ul>
     </aside>
 
-    <!-- Contact Content -->
+    <!-- Summary Content -->
     <div class="f-container">
-        <h1>Contact Us</h1>
-        <p>If you have any questions or feedback, please fill out the form below, and we’ll get back to you soon!</p>
-
-        <!-- Contact Form -->
-        <form id="contact-form" class="form" method="post" action="/submit-contact">
-            <div class="form-group">
-                <label for="full-name">Full Name:</label>
-                <input type="text" id="full-name" name="fullName" class="input-field" placeholder="Enter your full name" required>
+        <h1>Spending Summary</h1>
+        <div class="summary-content">
+            <div class="summary-card">
+                <h2>Total Budget</h2>
+                <p id="total-budget">$0</p>
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" class="input-field" placeholder="Enter your email" required>
+            <div class="summary-card">
+                <h2>Total Expenses</h2>
+                <p id="total-expenses">$0</p>
             </div>
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" class="input-field" placeholder="Enter your phone number">
+            <div class="summary-card">
+                <h2>Remaining Balance</h2>
+                <p id="remaining-balance">$0</p>
             </div>
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" class="input-field" rows="5" placeholder="Write your message here" required></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn">Submit</button>
-            </div>
-        </form>
+        </div>
+        <div class="spending-details">
+            <h2>Spending Details</h2>
+            <ul id="spending-list">
+                <!-- Spending details will be dynamically added here -->
+            </ul>
+        </div>
     </div>
 </body>
 </html>
-

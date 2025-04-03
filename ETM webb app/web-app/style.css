@@ -26,13 +26,14 @@ body {
 	align-items: center;
 	justify-content: left;
 	height: 100vh;
-	background-color: var(--light);
+	background: linear-gradient(to bottom, #5f0a87, #a4508b, white); /* Gradient from purple to white */
 	font-family: 'Poppins', sans-serif;
 	/* padding: 20px; */
 }
 
 .container {
 	background-color: var(--grey);
+	background: linear-gradient(to bottom, #5f0a87, #a4508b, white); /* Gradient from purple to white */
 	border-radius: 10px;
 	width: 100%;
 	max-width: 1280px;
@@ -403,7 +404,7 @@ body {
 .input-field:focus {
     border-color: var(--primary-clr);
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 128, 255, 0.3);
+    box-shadow: 0 0 5px rgba(203, 213, 223, 0.3);
 }
 
 textarea.input-field {
@@ -567,4 +568,78 @@ Button
     .form {
         width: 100%;
     }
+}
+
+/* Notepad Styles */
+.notepad {
+    margin-bottom: 20px;
+}
+
+#note-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.notes-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.note-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.note-item:hover {
+    background-color: #f0f0f0;
+}
+
+.note-text {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.note-text.done {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.mark-done {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.note-actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.note-actions .edit-note {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.note-actions .delete-note {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.note-actions button:hover {
+    opacity: 0.9;
 }
