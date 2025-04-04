@@ -465,10 +465,13 @@ Button
     margin: 300px 260px; /* Increase left margin to leave more space for the side menu */
     padding: 50px; /* Reduce padding to make the box smaller */
     background-color: var(--grey);
+    top: 50%; /* Move it to the vertical center */
+    left: 50%;
     border-radius: 10px;
     width: 400%; /* Reduce the width to make the box smaller */
     max-width: 600px; /* Set a maximum width for the box */
     box-shadow: 5px 5px 10px #000;
+	
 }
 
   body {
@@ -644,4 +647,26 @@ Button
 
 .note-actions button:hover {
     opacity: 0.9;
+}
+
+.contactform-container{ 
+    align-items: center;
+	margin: 300px 260px;
+	padding: 20px;
+	background-color: var(--grey);
+	border-radius: 10px;
+	width: 100%;
+	max-width: 600px;
+	box-shadow: 5px 5px 10px #c6a2a2;
+}
+
+.logout-container{
+	align-items: center;
+	margin: 300px 260px;
+	padding: 20px;
+	background-color: var(--grey);
+	border-radius: 10px;
+	width: 100%;
+	max-width: 600px;
+	box-shadow: 5px 5px 10px #000;
 }
