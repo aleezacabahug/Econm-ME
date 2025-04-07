@@ -3,79 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - EconMe</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="currency.css"> -->
-	<script src="script.js" defer></script>
-	<!-- <script src="currency.js" defer></script> -->
-    <title>Log Out - Expense Tracker Mate</title>
 </head>
 <body>
-		<!-- Side Navigation Bar -->
-		<aside class="side-bar">
-			<span class="menu-label">MENU</span>
-			<ul class="navbar-links">
-				<li>
-					<a href="index.html">
-						<span class="nav-icon">
-							<i class="fa-solid fa-house"></i>
-						</span>
-						<span class="nav-text">Dashboard</span>
-					</a>
-				</li>
-				<li>
-					<a href="currency.html">
-						<span class="nav-icon">
-							<i class="fa-solid fa-house"></i>
-						</span>
-						<span class="nav-text">Currency</span>
-					</a>
-				</li>
-				<li>
-					<a href="contact.html">
-						<span class="nav-icon">
-							<i class="fa-solid fa-info-circle"></i>
-						</span>
-						<span class="nav-text">Contact</span>
-					</a>
-				</li>
-				<li>
-					<a href="logout.html">
-						<span class="nav-icon">
-							<i class="fa-solid fa-info-circle"></i>
-						</span>
-						<span class="nav-text">Log out</span>
-					</a>
-				</li>
-		</aside>
-    <!-- Logout Content -->
-    <div class="logout-container">
-        <h1>Log Out</h1>
-        <p>Are you sure you want to log out?</p>
-        <div class="logout-buttons">
-            <button id="logout-confirm" class="btn btn-primary">Yes, Log Out</button>
-            <button id="logout-cancel" class="btn btn-secondary">No, Stay</button>
+    <div class="page-wrapper">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <div class="hamburger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" class="input-box" placeholder="Search...">
+                <div class="search-btn">
+                    <i class='bx bx-search'></i>
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <div class="mode-switch">
+                    <i class='bx bx-moon'></i>
+                </div>
+                <div class="notifications">
+                    <i class='bx bx-bell'></i>
+                </div>
+                <div class="profile">
+                    <img src="profile.jpg" alt="Profile">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Side Bar -->
+        <div class="side-bar">
+            <span class="menu-label">MENU</span>
+            <ul class="navbar-links">
+                <li><a href="index.html"><span class="nav-icon"><i class="fa-solid fa-house"></i></span><span class="nav-text">Dashboard</span></a></li>
+                <li><a href="currency.html"><span class="nav-icon"><i class="fa-solid fa-coins"></i></span><span class="nav-text">Currency</span></a></li>
+				<li><a href="contact.html"><span class="nav-icon"><i class="fa-solid fa-info-circle"></i></span><span class="nav-text">Contact</span></a></li>
+                <li class="active"><a href="logout.html"><span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span><span class="nav-text">Log out</span></a></li>
+            </ul>
+			<!-- this is a setting and logout side bar for future use  -->
+            <!-- <div class="line"></div>
+            <div class="sidebar-footer">
+                <div class="settings">
+                    <div class="gear-icon">
+                        <i class='bx bx-cog'></i>
+                    </div>
+                    <span class="nav-text">Settings</span>
+                </div>
+                <div class="logoutBtn">
+                    <div class="logout-icon">
+                        <i class='bx bx-log-out'></i>
+                    </div>
+                    <span class="nav-text">Logout</span>
+                </div>
+            </div> -->
+        </div>
+        
+        <!-- Main Content -->
+        <div class="contents">
+            <div class="panel-bar">
+                <div class="row-1">
+                    <h1>Logout</h1>
+                </div>
+            </div>
+            
+            <div class="form-container">
+                <div class="logout-confirmation">
+                    <h2>Are you sure you want to log out?</h2>
+                    <div class="logout-actions">
+                        <button id="logout-confirm" class="btn">Yes, Log Out</button>
+                        <button id="logout-cancel" class="btn btn-secondary">No, Stay</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-        // Select buttons
         const logoutConfirm = document.getElementById('logout-confirm');
         const logoutCancel = document.getElementById('logout-cancel');
 
-        // Handle logout confirmation
         logoutConfirm.addEventListener('click', () => {
-            // Clear the token from localStorage
             localStorage.removeItem('token');
-
-            // Redirect to the homepage
-            window.location.href = 'homepage.html';
+            window.location.href = 'home.html';
         });
 
-        // Handle logout cancellation
         logoutCancel.addEventListener('click', () => {
-            // Redirect back to the dashboard
             window.location.href = 'index.html';
         });
     </script>
