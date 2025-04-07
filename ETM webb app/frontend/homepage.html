@@ -3,118 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECONOME</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            height: 100vh;
-            background: linear-gradient(to top, white, #a4508b, #5f0a87);
-            color: white;
-            overflow: hidden;
-        }
-
-        h1 {
-            font-size: 8rem;
-            margin-bottom: 2rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 1s ease-out forwards;
-        }
-
-        .button-container {
-            display: flex;
-            gap: 1rem;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 1s ease-out forwards;
-            animation-delay: 0.5s;
-        }
-
-        .button {
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(135deg, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1);
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .button:active {
-            transform: scale(0.95);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        @keyframes fadeUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .about-us {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            text-align: center;
-            font-size: 1rem;
-            line-height: 1.5;
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .about-us h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-        }
-
-        .about-us p, .about-us ul, .about-us li {
-            color: #333; /* Dark gray font color */
-            margin: 0.5rem 0;
-        }
-    </style>
+    <title>EconoMe - Personal Finance Manager</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <h1>ECONOME</h1>
-    <div class="button-container">
-        <a href="login.html" class="button">Log In</a>
-        <a href="register.html" class="button">Create Account</a>
+<body class="home-page">
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>ECONOME</h1>
+            <p class="tagline">Your personal finance companion</p>
+            
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-primary-clr">Login</a>
+                <a href="register.html" class="btn btn-secondary">Register</a>
+                <a href="terms.html" class="btn btn-tertiary">Terms of Service</a>
+            </div>
+        </div>
     </div>
-    <div class="about-us">
-        <h2>About Us</h2>
-        <p>EconMe is a financial management website designed to assist users with tracking expenses and budgeting. It provides valuable insights through graphs and data that users might not easily access on their own.</p>
-        <p>The platform's key feature is its ability to visualize financial activities, helping users to understand their spending patterns and make informed decisions about their finances. EconME aims to simplify personal finance through user-friendly tools that enhance financial literacy and planning.</p>
-        <h2>How to Use EconMe</h2>
-        <p><strong>Navigation</strong></p>
-        <p>Use the Side Menu to explore the web's sections:</p>
-        <ul>
-            <li>Dashboard: View a snapshot of your financial activities and trends!</li>
-            <li>Currency: Convert currencies!</li>
-            <li>Contact: Reach out to us for support or suggestions!</li>
-            <li>About: Learn about EconMe and how to use it!</li>
-            <li>Login: Log in to your account to use our personalized budget planner today!</li>
-            <li>Register: Create your account today!</li>
-        </ul>
-        <p>Fill out the form with your full name, email, phone number, and a detailed description of your query. Our team will get back to you promptly if you have any questions.</p>
+    
+    <div class="features-section">
+        <div class="feature-cards">
+            <div class="feature-card">
+                <i class="bx bx-line-chart"></i>
+                <h3>Budget Tracking</h3>
+                <p>Monitor your expenses and income with intuitive charts</p>
+            </div>
+            <div class="feature-card">
+                <i class="bx bx-money"></i>
+                <h3>Currency Converter</h3>
+                <p>Convert between different currencies in real-time</p>
+            </div>
+            <div class="feature-card">
+                <i class="bx bx-notepad"></i>
+                <h3>Notes & Planning</h3>
+                <p>Keep track of your financial goals and notes</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="about-section">
+        <h2>About EconMe</h2>
+        <p>EconMe is designed to help you take control of your personal finances with easy-to-use tools and visualizations.</p>
+        
+        <div class="how-to-use">
+            <h3>How to Get Started</h3>
+            <ol>
+                <li>Create an account or login if you already have one</li>
+                <li>Set up your budget categories</li>
+                <li>Start tracking your expenses</li>
+                <li>Use the analytics to understand your spending patterns</li>
+            </ol>
+        </div>
     </div>
 </body>
 </html>
