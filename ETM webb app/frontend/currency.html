@@ -12,10 +12,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="currency.css">
 </head>
 <body>
-<<<<<<< Updated upstream
     <!-- Side Navigation Bar -->
     <aside class="side-bar">
         <span class="menu-label">MENU</span>
@@ -72,111 +70,6 @@
             <button id="convert-button" class="btn-primary">Convert</button>
 
             <p id="result" class="result-text"></p>
-=======
-    <div class="page-wrapper">
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <div class="top-bar-left">
-                <div class="hamburger-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="logo">
-                    <h1 class="logo">EconoMe</h1>
-                    <!-- <img src="logo.png" alt="Logo"> -->
-                </div>
-            </div>
-            <div class="top-bar-right">
-                <div class="mode-switch">
-                    <i class='bx bx-moon'></i>
-                </div>
-                <div class="profile">
-                    <img src="profile.jpg" alt="Profile">
-                </div>
-            </div>
-        </div>
-        
-        <!-- Side Bar -->
-        <div class="side-bar">
-            <span class="menu-label">MENU</span>
-            <ul class="navbar-links">
-                <li><a href="index.html"><span class="nav-icon"><i class="fa-solid fa-house"></i></span><span class="nav-text">Dashboard</span></a></li>
-                <li class="active"><a href="currency.html"><span class="nav-icon"><i class="fa-solid fa-coins"></i></span><span class="nav-text">Currency</span></a></li>
-                <li><a href="contact.html"><span class="nav-icon"><i class="fa-solid fa-info-circle"></i></span><span class="nav-text">Contact</span></a></li>
-                <li><a href="logout.html"><span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span><span class="nav-text">Log out</span></a></li>
-            </ul>
-        </div>
-        
-        <!-- Main Content -->
-        <div class="contents">
-            <div class="currency-container">
-                <div class="currency-header">
-                    <h1>Currency Converter</h1>
-                    <p>Convert between different currencies with real-time exchange rates</p>
-                </div>
-                
-                <div class="currency-form-container">
-                    <div class="form-group">
-                        <label for="amount">Amount to Convert</label>
-                        <input type="number" id="amount" class="input-field" value="100" min="0" step="0.01">
-                    </div>
-
-                    <div class="conversion-grid">
-                        <div class="form-group">
-                            <label for="from-currency-select">From Currency</label>
-                            <select id="from-currency-select" class="form-select"></select>
-                        </div>
-                        
-                        <div class="swap-currencies">
-                            <button id="swap-currencies" class="icon-btn">
-                                <i class='bx bx-transfer-alt'></i>
-                            </button>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="to-currency-select">To Currency</label>
-                            <select id="to-currency-select" class="form-select"></select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <button id="convert-button" class="btn btn-block">Convert</button>
-                    </div>
-                    
-                    <div id ="result-placeholder" class="result-placeholder">
-                        <i class='bx bx-line-chart'></i>
-                        <p>Your conversion will appear here</p>
-                    </div>
-
-                    <div id="result" class="result-display">
-                        <div class="result-placeholder"></div>
-                    </div>
-                </div>
-                
-                <div class="popular-currencies">
-                    <h3>Popular Currency Pairs</h3>
-                    <div class="currency-grid">
-                        <button class="currency-pair" data-from="USD" data-to="EUR">
-                            <span>USD → EUR</span>
-                            <i class='bx bx-right-arrow-alt'></i>
-                        </button>
-                        <button class="currency-pair" data-from="EUR" data-to="GBP">
-                            <span>EUR → GBP</span>
-                            <i class='bx bx-right-arrow-alt'></i>
-                        </button>
-                        <button class="currency-pair" data-from="JPY" data-to="USD">
-                            <span>JPY → USD</span>
-                            <i class='bx bx-right-arrow-alt'></i>
-                        </button>
-                        <button class="currency-pair" data-from="GBP" data-to="USD">
-                            <span>GBP → USD</span>
-                            <i class='bx bx-right-arrow-alt'></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
->>>>>>> Stashed changes
         </div>
     </div>
 
@@ -186,36 +79,6 @@
     <script src="api-key.js"></script>
     <!-- Currency Conversion Logic -->
     <script src="currency.js"></script>
-    <script>
-        // Add swap currencies functionality
-        document.getElementById('swap-currencies').addEventListener('click', function() {
-            const fromSelect = document.getElementById('from-currency-select');
-            const toSelect = document.getElementById('to-currency-select');
-            const temp = fromSelect.value;
-            fromSelect.value = toSelect.value;
-            toSelect.value = temp;
-        });
-
-        // Add popular currency pair functionality
-        document.querySelectorAll('.currency-pair').forEach(button => {
-            button.addEventListener('click', function() {
-                document.getElementById('from-currency-select').value = this.dataset.from;
-                document.getElementById('to-currency-select').value = this.dataset.to;
-            });
-        });
-            const modeSwitch = document.querySelector('.mode-switch');
-            const body = document.body;
-
-        // Toggle dark mode on click
-            modeSwitch.addEventListener('click', () => {
-                body.classList.toggle('dark-mode');
-
-                // Optionally: Toggle moon/sun icon
-                const icon = modeSwitch.querySelector('i');
-                icon.classList.toggle('bx-moon');
-                icon.classList.toggle('bx-sun');
-            });
-    </script>
 </body>
 </html>
 
