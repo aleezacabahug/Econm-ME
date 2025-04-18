@@ -1,0 +1,236 @@
+/* Currency Converter Styles */
+.currency-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.currency-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.currency-header h1 {
+    color: var(--heading-clr);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: auto;
+}
+
+.currency-header p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.currency-form-container {
+    background-color: var(--bg-primary);
+    border-radius: 10px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group .input-field {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--primary-clr);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.conversion-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1.5rem;
+    align-items: end;
+    margin: 2rem 0;
+}
+
+.swap-currencies {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.icon-btn {
+    background-color: var(--primary-clr);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1);
+}
+
+.icon-btn i {
+    font-size: 1.2rem;
+    
+}
+
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--primary-clr);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--bg-ternary);
+    color: var(--heading-clr);
+    cursor: pointer;
+}
+
+.result-display {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--primary-clr);
+    border-radius: 8px;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.result-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-clr);
+}
+
+.result-placeholder i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+.result-placeholder p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.conversion-result {
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.conversion-rate {
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.popular-currencies {
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+}
+
+.popular-currencies h3 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.popular-currencies span {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.currency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.currency-pair {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--primary-clr);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.currency-pair:hover {
+    background-color: var(--primary-clr);
+    color: white;
+}
+
+.currency-pair span {
+    font-weight: 500;
+}
+
+.currency-pair i {
+    font-size: 1.2rem;
+}
+
+/* Profile Icon */
+.profile {
+    cursor: pointer;
+    color: var(--text-clr);
+    font-size: 25px; /* Adjust the size as needed */
+    margin-right: 1.5rem; /* Add spacing from the right */
+    &:hover {
+        color: var(--primary-clr);
+    }
+    transition: color 0.2s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .conversion-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .swap-currencies {
+        padding: 0;
+        margin: 0.5rem 0;
+    }
+    
+    .icon-btn {
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .currency-container {
+        padding: 1rem;
+    }
+    
+    .currency-form-container {
+        padding: 1.5rem;
+    }
+    
+    .currency-header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --bg-primary: #1e1e1e;
+    --bg-ternary: #2c2c2c;
+    --text-clr: #cccccc;
+    --heading-clr: #ffffff;
+    --primary-clr: #007bff; /* or whatever accent color */
+    --text-color: #dddddd;
+}

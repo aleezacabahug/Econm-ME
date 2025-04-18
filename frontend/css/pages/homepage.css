@@ -1,0 +1,144 @@
+body {
+height: auto;
+min-height: 100%;
+overflow-x: hidden;
+overflow-y: auto;
+}
+
+/* Home Page */
+.home-page {
+    background-color: var(--bg-secondary);
+    color: var(--heading-clr);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-clr), #a4508b);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section, 
+.features-section, 
+.about-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: white;
+    color: var(--primary-clr);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.features-section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background-color: var(--bg-primary);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--primary-clr);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    color: var(--text-clr);
+}
+
+.about-section {
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.how-to-use {
+    background-color: var(--bg-primary);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.how-to-use ol {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.how-to-use li {
+    margin-bottom: 0.5rem;
+    color: var(--text-clr);
+}
+
+/* Logout Confirmation */
+.logout-confirmation {
+    text-align: center;
+}
+
+.logout-confirmation h2 {
+    margin-bottom: 2rem;
+    color: var(--heading-clr);
+}
+
+.logout-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-secondary {
+    background-color: var(--bg-ternary);
+    color: var(--heading-clr);
+}
+
+/* Registration/Login */
+.form-group, .auth-logo {
+    color: var(--text-color);
+}

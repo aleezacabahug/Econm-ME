@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EconoMe - Profile</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="profile.css"/>
+  <link rel="stylesheet" href="index.css"/>
+  <script src="profile.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <div class="hamburger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="logo">
+          <h1 class="logo">EconoMe</h1>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="mode-switch">
+          <i class='bx bx-moon'></i>
+        </div>
+        <a href="profile.html" class="profile">
+          <div class="profile">
+            <i class='bx bx-user'></i>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Side Bar -->
+    <div class="side-bar">
+      <span class="menu-label">MENU</span>
+      <ul class="navbar-links">
+        <li><a href="index.html"><span class="nav-icon"><i class="fa-solid fa-house"></i></span><span class="nav-text">Dashboard</span></a></li>
+        <li><a href="currency.html"><span class="nav-icon"><i class="fa-solid fa-coins"></i></span><span class="nav-text">Currency</span></a></li>
+        <li><a href="contact.html"><span class="nav-icon"><i class="fa-solid fa-info-circle"></i></span><span class="nav-text">Contact</span></a></li>
+        <li class="active"><a href="profile.html"><span class="nav-icon"><i class="fa-solid fa-user"></i></span><span class="nav-text">Profile</span></a></li>
+        <li><a href="logout.html"><span class="nav-icon"><i class="fa-solid fa-right-from-bracket"></i></span><span class="nav-text">Log out</span></a></li>
+      </ul>
+    </div>
+
+    <!-- Contents -->
+    <div class="contents">
+      <!-- Panel Bar -->
+      <div class="panel-bar">
+        <div class="row-1">
+          <h1>Settings</h1>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="description">
+        <div class="col-1">
+          <section id="profile-settings">
+            <div class="settings-container">
+              <!-- Updated Account Information Section -->
+              <div class="settings-section">
+                <h2 class="section-title">Account Information</h2>
+              </div>
+              
+              <!-- Profile photo section  -->
+              <div class="profile-photo-section">
+                <div class="profile-photo-container">
+                    <img src="default-profile.jpg" alt="Profile Photo" id="profile-picture" class="profile-photo">
+                    <div class="profile-photo-actions">
+                        <input type="file" id="profile-picture-upload" accept="image/*" style="display: none;">
+                        <button class="btn upload-btn" id="upload-btn">Upload New</button>
+                        <button class="btn delete-btn" id="delete-btn">Delete avatar</button>
+                    </div>
+                </div>
+              </div>
+                
+              <!-- Personal Details Section -->
+              <div class="settings-section">
+                  <h2 class="section-title">Personal details</h2>
+                  <p class="section-subtitle">Update your personal information</p>
+              </div>
+
+              <div class="settings-card">
+                <form id="profile-form">
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label>Full Name</label>
+                      <input type="text" class="input-field" id="full-name" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Username</label>
+                      <div class="info-value" id="username">Loading...</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input type="email" class="input-field" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Date of Birth</label>
+                      <input type="date" class="input-field" id="dob">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Phone Number</label>
+                      <input type="tel" class="input-field" id="phone" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Gender</label>
+                      <select class="input-field" id="gender">
+                        <option value="">Select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-actions">
+                    <button type="button" class="btn cancel-btn" id="cancel-btn">Cancel</button>
+                    <button type="submit" class="btn save-btn">Save Changes</button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Password Section -->
+              <div class="settings-section">
+                <h2 class="section-title">Password</h2>
+                <p class="section-subtitle">Set your security pin</p>
+
+                <div class="settings-card">
+                  <div class="form-group">
+                    <label>Current Password</label>
+                    <input type="password" class="password-input" id="current-password" placeholder="Enter current password">
+                  </div>
+
+                  <div class="form-group">
+                    <label>New Password</label>
+                    <input type="password" class="password-input" id="new-password" placeholder="Enter new password">
+                    <div class="password-strength" id="password-strength"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Confirm New Password</label>
+                    <input type="password" class="password-input" id="confirm-password" placeholder="Confirm new password">
+                  </div>
+
+                  <button class="btn update-btn" id="update-password-btn">Update Password</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

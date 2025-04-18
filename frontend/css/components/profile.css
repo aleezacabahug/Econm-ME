@@ -1,0 +1,275 @@
+/* Profile Settings Styles */
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.settings-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.col-1 {
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--bg-primary);
+    border-radius: 10px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section {
+    margin-bottom: 2.5rem;
+}
+
+.settings-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    color: var(--heading-clr);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--text-clr);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.settings-card {
+    background-color: var(--bg-ternary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.card-title {
+    color: var(--heading-clr);
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.card-subtitle {
+    color: var(--text-clr);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-clr);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-value {
+    color: var(--heading-clr);
+    font-weight: 500;
+    padding: 0.75rem;
+    background-color: var(--bg-primary);
+    border-radius: 6px;
+    border: 1px solid var(--bg-secondary);
+}
+
+.input-field, .password-input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--bg-secondary);
+    background-color: var(--bg-primary);
+    color: var(--heading-clr);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus, .password-input:focus {
+    border-color: var(--primary-clr);
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.save-btn {
+    background-color: var(--primary-clr);
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: var(--primary-dark-clr);
+}
+
+.update-btn {
+    background-color: var(--bg-primary);
+    color: var(--primary-clr);
+    border: 1px solid var(--primary-clr);
+}
+
+.update-btn:hover {
+    background-color: var(--primary-clr);
+    color: white;
+}
+
+.delete-btn {
+    background-color: #ff4444;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+.upload-btn {
+    background-color: var(--primary-clr);
+    color: white;
+}
+
+.upload-btn:hover {
+    background-color: var(--primary-dark-clr);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.cancel-btn {
+    background-color: var(--bg-primary);
+    color: var(--text-clr);
+    border: 1px solid var(--bg-secondary);
+}
+
+.cancel-btn:hover {
+    background-color: var(--bg-secondary);
+}
+
+/* Password strength indicator */
+.password-strength {
+    height: 4px;
+    margin-top: 8px;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.password-strength.weak {
+    width: 33%;
+    background-color: #ff4444;
+}
+
+.password-strength.medium {
+    width: 66%;
+    background-color: #ffbb33;
+}
+
+.password-strength.strong {
+    width: 100%;
+    background-color: #00C851;
+}
+
+/* Profile Photo Section */
+.profile-photo-section {
+    margin-bottom: 2rem;
+}
+
+.profile-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-clr);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+    opacity: 0.8;
+}
+
+.profile-photo-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .settings-container {
+        padding: 1.5rem;
+    }
+    
+    .settings-card {
+        padding: 1rem;
+    }
+    
+    .profile-photo-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .profile-photo-actions .btn {
+        width: 100%;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --bg-primary: #1e1e1e;
+    --bg-secondary: #2d2d2d;
+    --bg-ternary: #2c2c2c;
+    --text-clr: #cccccc;
+    --heading-clr: #ffffff;
+    --primary-clr: #007bff;
+}
+
+body.dark-mode .input-field,
+body.dark-mode .password-input {
+    background-color: #2d2d2d;
+    color: #ffffff;
+}
+
+body.dark-mode .info-value {
+    background-color: #2d2d2d;
+    border-color: #3d3d3d;
+}
