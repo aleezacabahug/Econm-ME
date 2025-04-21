@@ -74,6 +74,18 @@
     text-decoration: none;
 }
 
+/* Profile Icon */
+.profile {
+    cursor: pointer;
+    color: var(--text-clr);
+    font-size: 25px; /* Adjust the size as needed */
+    margin-right: 1.5rem; /* Add spacing from the right */
+    &:hover {
+        color: var(--primary-clr);
+    }
+    transition: color 0.2s;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .logout-content {

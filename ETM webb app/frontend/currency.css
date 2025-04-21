@@ -19,7 +19,7 @@
 }
 
 .currency-header p {
-    color: var(--text-clr);
+    color: var(--text-color);
     font-size: 1.1rem;
 }
 
@@ -29,6 +29,16 @@
     padding: 2.5rem;
     margin-bottom: 3rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group .input-field {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--primary-clr);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
 
 .conversion-grid {
@@ -80,7 +90,7 @@
 }
 
 .result-display {
-    background-color: var(--bg-ternary);
+    background-color: var(--bg-secondary);
     border: 1px solid var(--primary-clr);
     border-radius: 8px;
     padding: 2.5rem;
@@ -115,7 +125,8 @@
 
 .conversion-result {
     font-size: 1.5rem;
-    color: var(--heading-clr);
+    color: var(--heading-color);
+    font-weight: 700;
 }
 
 .conversion-rate {
@@ -169,6 +180,18 @@
 
 .currency-pair i {
     font-size: 1.2rem;
+}
+
+/* Profile Icon */
+.profile {
+    cursor: pointer;
+    color: var(--text-clr);
+    font-size: 25px; /* Adjust the size as needed */
+    margin-right: 1.5rem; /* Add spacing from the right */
+    &:hover {
+        color: var(--primary-clr);
+    }
+    transition: color 0.2s;
 }
 
 /* Responsive Adjustments */

@@ -79,6 +79,7 @@
                 if (response.ok) {
                     alert(data.message);
                     localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
                     window.location.href = 'index.html';
                 } else {
                     alert(data.message);
@@ -87,7 +88,9 @@
                 console.error('Error:', err);
                 alert('An error occurred. Please try again.');
             }
+            
         });
     </script>
+    
 </body>
 </html>

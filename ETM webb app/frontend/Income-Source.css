@@ -1,7 +1,8 @@
 /* Income History Styles */
 .income-history {
-    width: 205%;
-    margin-top: 5px;
+    width: 100%; /* Changed from 205% to 100% */
+    overflow: auto;
+    margin-top: 20px;
     background-color: var(--bg-primary);
     padding: 20px;
     border-radius: 8px;
@@ -28,8 +29,8 @@
 }
 
 .income-summary {
-    margin-top: 10px;
-    width: 100%;
+    margin-top: 15px;
+    width: 200%;
 }
 
 .recent-income, .all-income {
@@ -37,7 +38,7 @@
     padding: 15px;
     border-radius: 8px;
     margin-top: 10px;
-    color : var(--heading-clr);
+    color: var(--heading-clr);
 }
 
 .income-list {
@@ -113,3 +114,22 @@
     font-style: italic;
     opacity: 0.7;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .income-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .income-amount {
+        text-align: left;
+        margin: 0;
+    }
+    
+    .income-actions {
+        align-self: flex-end;
+    }
+}
+
