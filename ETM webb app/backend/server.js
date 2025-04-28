@@ -5,10 +5,13 @@ const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const open = require('open');
 
 const app = express();
 const PORT = 3000;
 const JWT_SECRET = 'your_jwt_secret_key'; // Replace with a secure key
+
+
 
 // Middleware
 app.use(cors({
@@ -391,12 +394,23 @@ app.delete('/incomes/clear', authenticateJWT, async (req, res) => {
 // Serve static files
 app.use(express.static(path.join(__dirname, '../frontend')));
 
+// Redirect root URL to homepage.html
+app.get('/', (req, res) => {
+  res.redirect('/homepage.html');
+});
+
 // Handle undefined routes
 app.use((req, res) => {
   res.status(404).send('404: Page Not Found');
 });
 
 // Start server
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`Server running on http://localhost:${PORT}`);
+  
+    // Automatically open the homepage in the default browser
+    const { default: open } = await import('open');
+
+    // Automatically open the homepage in the default browser
+    open(`http://localhost:${PORT}/homepage.html`);
 });
